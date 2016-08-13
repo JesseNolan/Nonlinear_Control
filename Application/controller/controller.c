@@ -1,4 +1,5 @@
 
+#include "controller.h"
 
 Con_coeffs con_coeffs;
 Signals signals;

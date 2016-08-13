@@ -20,6 +20,7 @@ typedef struct{
 	long double y[2];
 } Signals;
 
-
+extern Con_coeffs con_coeffs;
+extern Signals signals;
 
 #endif

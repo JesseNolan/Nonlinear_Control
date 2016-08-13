@@ -31,15 +31,15 @@ void controller(Signals *s, Con_coeffs *c)
 	s->u[1] = c->a1*s->u[2] + c->a2*s->u[3] + c->a3*s->u[4] + c->a4*s->u[5] + c->a5*s->u[6] + c->b1*s->e[1] + c->b2*s->e[2] + c->b3*s->e[3] + c->b4*s->e[4] + c->b5*s->e[5];
 }
 
-void increment(long double *e, long double *u)
+void increment(Signals *s)
 {
-	u[6] = u[5];
-	u[5] = u[4];
-	u[4] = u[3];
-	u[3] = u[2];
-	u[2] = u[1];
+	s->u[6] = s->u[5];
+	s->u[5] = s->u[4];
+	s->u[4] = s->u[3];
+	s->u[3] = s->u[2];
+	s->u[2] = s->u[1];
 	
-	e[5] = e[4];
-	e[4] = e[3];
-	e[2] = e[1];
+	s->e[5] = s->e[4];
+	s->e[4] = s->e[3];
+	s->e[2] = s->e[1];
 }
